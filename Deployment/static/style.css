@@ -1,0 +1,280 @@
+:root {
+  --Blue1: #00162D;
+  --Blue2: #083564;
+  --Blue3: #0C427B;
+  --Blue4: #1570D2;
+  --Blue5: #62A6F0;
+  --neutral: #E7E8E8;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--Blue2);
+  font-family: 'Inter', sans-serif;
+}
+
+.box {
+  display: flex;                        
+  flex-direction: row;                  
+  align-items: center;                  
+  justify-content: space-between;       
+  background: var(--neutral);
+  border-radius: 70px;
+  box-shadow: 0 0 20px var(--Blue1);
+  height: 90vh;
+  width: 80vw;
+  max-width: 1500px;
+  margin: 40px auto;
+}
+
+.description {
+  flex: 1;
+  padding:50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.description h1 {
+  margin-bottom: 0px;
+  line-height: 1.2;
+  color: var(--Blue1);
+  padding: 100px;
+  padding-bottom: 10px;
+  font-size: 50px;
+}
+
+.description p {
+  padding-bottom: 10px; 
+  padding-left: 105px;
+}
+
+.illustration {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  max-height: 90.5vh;
+  object-fit: cover;
+  border-radius: 0px 70px 70px 0px;
+}
+
+.btn {
+  background-color: var(--Blue1);
+  color: var(--neutral);
+  font-weight: bold;
+  font-size: 15px; 
+  padding: 30px 70px;
+  border: 2px solid var(--Blue1);
+  border-radius: 20px;
+  margin: 60px 0px 150px 200px;
+  align-self: flex-start;
+}
+
+
+.btn:hover {
+  background-color: var(--Blue5);
+  color: var(--Blue1);
+  border-color: var(--Blue5);
+  cursor: pointer;
+}
+
+.model {
+  display: none;
+  position: fixed;
+  background-color: var(--Blue1);
+  justify-content: center;
+  align-items: center;
+
+  left: 228px;
+  top: 30px;
+  width: 70%;
+}
+
+
+@media (max-width: 768px) {
+  .box {
+    flex-direction: column;
+    border-radius: 40px;
+    height: auto;
+    width: 90vw;
+  }
+
+  .description h1 {
+    padding: 40px 20px;
+    font-size: 48px;
+  }
+
+  .description p {
+    padding-left: 25px;
+  }
+
+  .btn {
+    margin: 0 auto 60px;
+  }
+
+  .image {
+    width: 90vw;
+    border-radius: 0px 0px 40px 40px;
+  }
+
+  .model {
+    left: 120px;
+    top: 30px;
+    width: 70%;
+  }
+}
+
+.model-content {
+  background-color: var(--Blue1);
+  padding: 40px;
+  border-radius: 10px;
+  text-align: center;
+  color: var(--neutral);
+  width: 90%;
+  max-width: 700px;
+  box-shadow: 0 0 20px var(--Blue1);
+}
+
+.model-content input[type="file"] {
+  margin: 20px 0;
+  color: var(--neutral);
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 28px;
+  color: var(--neutral);
+  cursor: pointer;
+}
+
+.scrollable-section {
+  max-height: 70vh;
+  overflow-y: auto;
+  margin-top: 20px;
+}
+
+.result-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.result-item {
+  text-align: center;
+  width: 200px;
+}
+
+.result-item img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.download-btn {
+  background-color: var(--Blue4);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.predict-btn {
+  background-color: var(--Blue4);
+  color: var(--neutral);
+  font-weight: bold;
+  padding: 10px 30px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.predict-btn:hover {
+  background-color: var(--Blue5);
+  color: var(--Blue1);
+}
+
+.upload-box {
+  color: white;
+  font-family: 'Inter', sans-serif;
+  margin: 20px auto;
+  width: 90%;
+  max-width: 600px;
+}
+
+.upload-area {
+  background-color: rgba(8, 53, 100, 0.3); /* var(--Blue2) */
+  border: 2px dashed var(--Blue2);
+  border-radius: 10px;
+  padding: 30px;
+  text-align: center;
+  position: relative;
+  transition: border 0.3s;
+}
+
+.upload-area.dragover {
+  border-color: var(--Blue4);
+  background-color: #2B2B3C;
+}
+
+.upload-info {
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+.upload-btn, .predict-btn, .download-btn {
+  margin-top: 10px;
+  display: inline-block;
+  background-color: var(--Blue3);
+  color: var(--neutral);
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  position: relative;
+}
+
+.upload-btn input[type="file"] {
+  display: none;
+}
+
+.download-btn {
+  display: inline-block;
+  margin: 0.5em 1em 0 0;
+  padding: 8px 16px;
+  background-color: var(--Blue3);
+  color: var(--neutral);
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+.upload-btn:hover, .download-btn:hover {
+  background-color: var(--Blue5);
+  color: var(--Blue1);
+  border-color: var(--Blue5);
+  cursor: pointer;
+}
+
+.close-btn {
+  position: absolute;
+  top: -25px;
+  right: 0px;
+  background: transparent;
+  border: none;
+  color: var(--neutral);
+  font-size: 24px;
+  cursor: pointer;
+}

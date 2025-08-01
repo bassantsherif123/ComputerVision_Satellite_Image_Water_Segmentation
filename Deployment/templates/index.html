@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='icon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <title>Water Segmentation</title>
+</head>
+<body>
+
+  <div class="box">
+    <div class="description">
+      <h1>Satellite<br>Water<br>Segmentation</h1>
+      <p>Predict Binary Water Mask for Satellite Images.</p>
+      <input class="btn" type="button" value="Predict Now!" onclick="openModel()">
+    </div>
+    
+    <div class="illustration">
+      <img src="{{ url_for('static', filename='background.png') }}" class="image">
+    </div>
+  </div>
+
+  <div class="model" id="predictionModel">
+    <div class="model-content">
+      <span class="close" onclick="closeModel()">&times;</span>
+      <h1>🚀 Water Segmentation<br>Using ResNet34 Model</h1>
+
+      <div class="upload-box">
+        <div class="upload-area" id="uploadArea">  
+          <p> 🛰️ Please Upload a Satellite Image here</p>
+          <p class="upload-info"> <em> .tif, .tiff only </em> </p>
+          <label class="upload-btn">
+            Browse files
+            <input type="file" id="fileInput" accept=".tif,.tiff">
+          </label>
+        </div>
+        <p id="uploadStatus" class="upload-info"></p>
+      </div>
+    </div>
+  </div>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
