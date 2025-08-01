@@ -29,7 +29,7 @@ The multi-band structure enhances water segmentation accuracy.
 
 > 📷 _Below is a sample visualization of the spectral bands:_
 
-![Bands Explanation](Deployment/static/channels.jpg)
+![Bands Explanation](Deployment/static/Channels.jpg)
 
 |Band|Min|Max|
 |:----:|:---:|:---:|
