@@ -29,10 +29,10 @@ The multi-band structure enhances water segmentation accuracy.
 
 > 📷 _Below is a sample visualization of the spectral bands:_
 
-![Bands Explanation](static/images/channels.jpg)
+![Bands Explanation](Deployment/static/channels.jpg)
 
 |Band|Min|Max|
-|----|---|---|
+|:----:|:---:|:---:|
 |Band 1|-1393.0|6568.0|
 |Band 2|-1169.0|9659.0|
 |Band 3|-722.0|11368.0|
@@ -57,7 +57,7 @@ git clone https://github.com/bassantsherif123/ComputerVision_Satellite_Image_Wat
 - Visualize band combinations
 - View the predicted segmentation mask
 - Download the output mask
-- Download the model using the following link, then put it to Model folder: 📥 [Download Model File](https://drive.google.com/file/d/1_-PE5EpEGn0I2a2jmfdbtyUt9SKcFqua/view?usp=sharing)
+- Download the model using the following link, then put it to Model folder: 📥 [Download Model File](https://drive.google.com/file/d/1DHjVIwiL3VdNSP67QV9zuipDwdiQKeTz/view?usp=sharing)
 ### To run the app, use:
 ```
 python Deployment/app.py
@@ -65,10 +65,8 @@ python Deployment/app.py
 ## 📈 Model Evaluation
 
 | Model Name        | Accuracy | IoU  |
-| ----------------- | -------- | ---- |
+|:-----------------:|:--------:|:----:|
 | Custom UNet       | 0.955315 | 0.826221 |
 | EfficientNetV2B0  | 0.901890 | 0.408989 |
 | ResNet34          | 0.958784 | 0.836132 |
 | ResNet50          | 0.857304 | 0.408989|
-
-
